@@ -7,13 +7,15 @@ import {UserModule} from './user/user.module';
 import { EmployeeComponent } from './employee/employee.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FormsModule } from '@angular/forms';
+import { DatabindComponent } from './databind/databind.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    AccountsComponent
+    AccountsComponent,
+    DatabindComponent
   ],
   imports: [
     BrowserModule,
