@@ -11,4 +11,14 @@ export class DatabindComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  dynName = "Moshin";
+
+  myMethod(){
+    return "Hello " + this.dynName; 
+  }
+
+  appStatus = true;
+  status1 = "Online"
+  status2 = "Offline"
+
 }

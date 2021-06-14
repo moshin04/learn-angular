@@ -1,3 +1,16 @@
 <div class="container">
-  <p>databind works!</p>
+  <!-- Interpolation only works with string values -->
+  <p class="h4">My name is {{ dynName }}</p>
+  <br />
+  <!-- we can also use expressions in Interpolation -->
+  Using experssion --> {{ 5 * 5 }} <br />
+  <!-- String concatination -->
+  String Interpolation --> {{ "Welcome " + dynName }} <br />
+  <!-- Js inbuit properties -->
+  Length --> {{ dynName.length }} <br />
+  UpperCase --> {{ dynName.toUpperCase() }} <br />
+  Creating Custom methods --> {{ myMethod() }} <br />
+  Ternary conditional operators --> This app is
+  {{ appStatus ? status1 : status2 }}
+  <br />
 </div>
