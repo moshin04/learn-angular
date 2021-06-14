@@ -1,0 +1,93 @@
+<br />
+<div class="container">
+  <form class="row g-3 needs-validation" (ngSubmit)="onSubmit()">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Account Number</label>
+
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="accounts.accnumber"
+        name="accnumber"
+      />
+
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">IFSC Code</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="accounts.ifsc"
+        name="ifsc"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="accounts.username"
+          name="username"
+        />
+        <div class="invalid-feedback">Please choose a username.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Banks</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="accounts.bank"
+        name="bank"
+      />
+      <div class="invalid-feedback">Please provide a valid value.</div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom04" class="form-label">Branch</label>
+      <select
+        class="form-select"
+        id="validationCustom04"
+        [(ngModel)]="accounts.branch"
+        name="branch"
+      >
+        <option selected disabled value="">Choose...</option>
+        <option>123456</option>
+        <option>09876</option>
+        <option>qwerty</option>
+      </select>
+      <div class="invalid-feedback">Please select a valid code.</div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Code</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="accounts.code"
+        name="code"
+      />
+      <div class="invalid-feedback">Please provide a valid zip.</div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="invalidCheck"
+          required
+        />
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">You must agree before submitting.</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
