@@ -21,4 +21,6 @@ export class DatabindComponent implements OnInit {
   status1 = "Online"
   status2 = "Offline"
 
+  enable = "true";
+
 }
