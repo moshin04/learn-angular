@@ -1,6 +1,10 @@
 <br />
 <div class="container">
-  <form class="row g-3 needs-validation" (ngSubmit)="onSubmit()">
+  <form
+    class="row g-3 needs-validation"
+    #myForm="ngForm"
+    (ngSubmit)="onSubmit()"
+  >
     <div class="col-md-4">
       <label for="validationCustom01" class="form-label">Account Number</label>
 
@@ -9,6 +13,7 @@
         class="form-control"
         [(ngModel)]="accounts.accnumber"
         name="accnumber"
+        required
       />
 
       <div class="valid-feedback">Looks good!</div>
@@ -20,6 +25,7 @@
         class="form-control"
         [(ngModel)]="accounts.ifsc"
         name="ifsc"
+        required
       />
       <div class="valid-feedback">Looks good!</div>
     </div>
@@ -31,6 +37,7 @@
           class="form-control"
           [(ngModel)]="accounts.username"
           name="username"
+          required
         />
         <div class="invalid-feedback">Please choose a username.</div>
       </div>
@@ -42,6 +49,7 @@
         class="form-control"
         [(ngModel)]="accounts.bank"
         name="bank"
+        required
       />
       <div class="invalid-feedback">Please provide a valid value.</div>
     </div>
@@ -52,6 +60,7 @@
         id="validationCustom04"
         [(ngModel)]="accounts.branch"
         name="branch"
+        required
       >
         <option selected disabled value="">Choose...</option>
         <option>123456</option>
@@ -67,6 +76,7 @@
         class="form-control"
         [(ngModel)]="accounts.code"
         name="code"
+        required
       />
       <div class="invalid-feedback">Please provide a valid zip.</div>
     </div>
@@ -77,6 +87,8 @@
           type="checkbox"
           value=""
           id="invalidCheck"
+          [(ngModel)]="accounts.check"
+          name="check"
           required
         />
         <label class="form-check-label" for="invalidCheck">
@@ -87,7 +99,13 @@
     </div>
 
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!myForm.form.valid"
+      >
+        Submit form
+      </button>
     </div>
   </form>
 </div>

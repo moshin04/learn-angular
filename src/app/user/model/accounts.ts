@@ -6,5 +6,6 @@ export class Accounts {
     bank?:string;
     branch?:string;
     code?:number;
+    check?:boolean;
     
     }
