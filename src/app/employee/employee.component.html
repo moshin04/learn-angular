@@ -1,6 +1,10 @@
 <br />
 <div class="container">
-  <form class="row g-3 needs-validation" (ngSubmit)="onSubmit()">
+  <form
+    class="row g-3 needs-validation"
+    #myForm="ngForm"
+    (ngSubmit)="onSubmit()"
+  >
     <div class="col-md-4">
       <label for="validationCustom01" class="form-label">Employee name</label>
 
@@ -9,6 +13,7 @@
         class="form-control"
         [(ngModel)]="employee.empname"
         name="empname"
+        required
       />
 
       <div class="valid-feedback">Looks good!</div>
@@ -22,6 +27,7 @@
         class="form-control"
         [(ngModel)]="employee.emplname"
         name="emplname"
+        required
       />
       <div class="valid-feedback">Looks good!</div>
     </div>
@@ -35,6 +41,7 @@
           class="form-control"
           [(ngModel)]="employee.empid"
           name="empid"
+          required
         />
         <div class="invalid-feedback">Please choose a username.</div>
       </div>
@@ -46,6 +53,7 @@
         class="form-control"
         [(ngModel)]="employee.empcity"
         name="empcity"
+        required
       />
       <div class="invalid-feedback">Please provide a valid city.</div>
     </div>
@@ -56,9 +64,12 @@
         id="validationCustom04"
         [(ngModel)]="employee.empstate"
         name="empstate"
+        required
       >
         <option selected disabled value="">Choose...</option>
-        <option>...</option>
+        <option>kar</option>
+        <option>mah</option>
+        <option>kel</option>
       </select>
       <div class="invalid-feedback">Please select a valid state.</div>
     </div>
@@ -69,6 +80,7 @@
         class="form-control"
         [(ngModel)]="employee.empzip"
         name="empzip"
+        required
       />
       <div class="invalid-feedback">Please provide a valid zip.</div>
     </div>
@@ -79,12 +91,16 @@
           type="checkbox"
           value=""
           id="invalidCheck"
+          [(ngModel)]="employee.check"
+          name="check"
           required
         />
         <label class="form-check-label" for="invalidCheck">
           Agree to terms and conditions
         </label>
-        <div class="invalid-feedback">You must agree before submitting.</div>
+        <div class="invalid-feedback" required>
+          You must agree before submitting.
+        </div>
       </div>
     </div>
     <div class="col-md-4">
@@ -95,12 +111,19 @@
         class="form-control"
         [(ngModel)]="employee.dob"
         name="dob"
+        required
       />
 
       <div class="valid-feedback">Looks good!</div>
     </div>
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!myForm.form.valid"
+      >
+        Submit form
+      </button>
     </div>
   </form>
 </div>

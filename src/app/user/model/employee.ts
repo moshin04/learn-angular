@@ -7,5 +7,6 @@ empcity?: string;
 empstate?: string;
 empzip?: number;
 dob?:Date;
+check?:boolean;
 
 }
