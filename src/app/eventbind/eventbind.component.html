@@ -1,41 +1,168 @@
 <div class="container">
-  <p class="h4">
-    Event-binding
-    <!-- Event-binding is nothing but binding data from view to component. -->
-  </p>
-  <br />
-  <!-- Creating myAddCart and using it to access msg dynamically -->
-  <button class="btn btn-primary" (click)="myAddCart()">Add to Cart</button
-  ><br /><br />
-  <p>{{ msg }}</p>
-  <br />
+  <div class="row row align-items-center">
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">
+            Event-binding
+            <!-- Event-binding is nothing but binding data from view to component. -->
+          </p>
+          <!-- Creating myAddCart and using it to access msg dynamically -->
+          <button class="btn btn-primary" (click)="myAddCart()">
+            Add to Cart</button
+          ><br /><br />
+          <p>{{ msg }}</p>
+        </div>
+      </div>
+    </div>
 
-  <!-- Event-binding using input tag check the values in console.log -->
-  <p class="h4">Event-binding using input</p>
-  <br />
-  <div class="mb-1 row">
-    <input
-      class="form-control"
-      type="text"
-      value="myInputValue"
-      (click)="myInputValue($event)"
-    />
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <!-- Event-binding using input tag check the values in console.log -->
+          <p class="h4">Event-binding using input</p>
+
+          <input
+            class="form-control"
+            type="text"
+            value="myInputValue"
+            (click)="myInputValue($event)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <!-- Event-binding using button tag -->
+          <p class="h4">Event-binding using buttons</p>
+          <button class="btn btn-primary" (click)="addCart($event)" value="TV">
+            Tv</button
+          >&nbsp;
+          <button
+            class="btn btn-primary"
+            (click)="addCart($event)"
+            value="Mobile"
+          >
+            Mobile</button
+          >&nbsp;
+          <button
+            class="btn btn-primary"
+            (click)="addCart($event)"
+            value="Earphones"
+          >
+            Earphones</button
+          >&nbsp; <br /><br />
+          <!-- Creating myCart method and using it to access cartmsg dynamically -->
+          <p>{{ cartmsg }}</p>
+
+          <br />
+          <!-- <button (scroll)="scrollCallback()">Click Me</button> -->
+        </div>
+      </div>
+    </div>
   </div>
-  <br /><br />
-  <!-- Event-binding using button tag -->
-  <p class="h4">Event-binding using buttons</p>
   <br />
-  <button class="btn btn-primary" (click)="addCart($event)" value="TV">
-    Tv</button
-  >&nbsp;
-  <button class="btn btn-primary" (click)="addCart($event)" value="Mobile">
-    Mobile</button
-  >&nbsp;
-  <button class="btn btn-primary" (click)="addCart($event)" value="Earphones">
-    Earphones</button
-  >&nbsp; <br /><br />
-  <!-- Creating myCart method and using it to access cartmsg dynamically -->
-  <p>{{ cartmsg }}</p>
 
+  <div class="row row align-items-center">
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">focusCallback</p>
+          <p>
+            This is the tag which is used for focus clicking, check the result
+            in console
+          </p>
+          <button class="btn btn-primary" (focus)="focusCallback()">
+            Click Me
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">blurCallback</p>
+          <p>
+            Whern we click it is captured, and when we click on somewhere else
+            the click is displayed
+          </p>
+          <button class="btn btn-primary" (blur)="blurCallback()">
+            Click Me
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">clickCallback</p>
+          <p>
+            When we click the click is captured, and the click is displayed in
+            console of browser
+          </p>
+          <button class="btn btn-primary" (click)="clickCallback()">
+            Click Me
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <br />
+
+  <div class="row row align-items-center">
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">dblclickCallback</p>
+          <p>
+            This is the tag which is used for focus clicking, check the result
+            in console
+          </p>
+          <button class="btn btn-primary" (dblclick)="dblclickCallback()">
+            Click Me
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">keyupCallback</p>
+          <p>
+            Whern we click it is captured, and when we click on somewhere else
+            the click is displayed
+          </p>
+          <input
+            class="form-control"
+            type="text"
+            value="Press any key"
+            (keydown)="keydownCallback()"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="col py-3 px-lg-5 border bg-light">
+          <p class="h4">mouseenterCallback</p>
+          <p>
+            When we click the click is captured, and the click is displayed in
+            console of browser
+          </p>
+          <input
+            class="form-control"
+            type="text"
+            value="Hover the mouse"
+            (mouseenter)="mouseenterCallback()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
