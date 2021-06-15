@@ -1,0 +1,41 @@
+<div class="container">
+  <p class="h4">
+    Event-binding
+    <!-- Event-binding is nothing but binding data from view to component. -->
+  </p>
+  <br />
+  <!-- Creating myAddCart and using it to access msg dynamically -->
+  <button class="btn btn-primary" (click)="myAddCart()">Add to Cart</button
+  ><br /><br />
+  <p>{{ msg }}</p>
+  <br />
+
+  <!-- Event-binding using input tag check the values in console.log -->
+  <p class="h4">Event-binding using input</p>
+  <br />
+  <div class="mb-1 row">
+    <input
+      class="form-control"
+      type="text"
+      value="myInputValue"
+      (click)="myInputValue($event)"
+    />
+  </div>
+  <br /><br />
+  <!-- Event-binding using button tag -->
+  <p class="h4">Event-binding using buttons</p>
+  <br />
+  <button class="btn btn-primary" (click)="addCart($event)" value="TV">
+    Tv</button
+  >&nbsp;
+  <button class="btn btn-primary" (click)="addCart($event)" value="Mobile">
+    Mobile</button
+  >&nbsp;
+  <button class="btn btn-primary" (click)="addCart($event)" value="Earphones">
+    Earphones</button
+  >&nbsp; <br /><br />
+  <!-- Creating myCart method and using it to access cartmsg dynamically -->
+  <p>{{ cartmsg }}</p>
+
+  <br />
+</div>
