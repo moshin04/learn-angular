@@ -8,6 +8,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindComponent } from './databind/databind.component';
+import { EventbindComponent } from './eventbind/eventbind.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DatabindComponent } from './databind/databind.component';
     AppComponent,
     EmployeeComponent,
     AccountsComponent,
-    DatabindComponent
+    DatabindComponent,
+    EventbindComponent
   ],
   imports: [
     BrowserModule,
