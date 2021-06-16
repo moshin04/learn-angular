@@ -23,7 +23,20 @@
       </div>
     </div>
     <div class="col-4">
-      <div class="p-3 border bg-light">Ng-Switch-Directive</div>
+      <div class="p-3 border bg-light">
+        <div>Ng-Switch-Directive</div>
+        <hr />
+        <p>
+          Here i have used the angular [ngSwitch] for switch case fro rendering
+          multiple cases
+        </p>
+        <div [ngSwitch]="color">
+          <div *ngSwitchCase="'red'" class="h3">You picked Red color</div>
+          <div *ngSwitchCase="'blue'" class="h3">You picked Blue color</div>
+          <div *ngSwitchCase="'green'" class="h3">You picked Green color</div>
+          <div *ngSwitchDefault class="h3">Pick again</div>
+        </div>
+      </div>
     </div>
     <div class="col-4">
       <div class="p-3 border bg-light">Ng-For-Directive</div>
