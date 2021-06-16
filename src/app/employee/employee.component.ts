@@ -24,7 +24,7 @@ export class EmployeeComponent implements OnInit {
       ]),
 
     });
-console.log(errors);
+  console.log(errors);
 
   }
 
