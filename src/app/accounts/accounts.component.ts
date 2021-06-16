@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Accounts } from '../user/model/accounts';
-import { FormGroup,FormControl,Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-accounts',
@@ -14,15 +13,7 @@ export class AccountsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let errors = new FormGroup({
-      name: new FormControl(this.accounts.accnumber, [
-        Validators.required,
-        Validators.minLength(4),
-      ]),
-
-    });
-console.log(errors);
-
+  
   }
 
   onSubmit(){

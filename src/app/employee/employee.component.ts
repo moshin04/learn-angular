@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../user/model/employee';
-import { FormGroup,FormControl,Validators } from '@angular/forms'
-
 
 @Component({
   selector: 'app-employee',
@@ -17,18 +15,8 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    let errors = new FormGroup({
-      name: new FormControl(this.employee.empname, [
-        Validators.required,
-        Validators.minLength(4),
-      ]),
-
-    });
-  console.log(errors);
-
   }
 
-  
 
   onSubmit(){
     console.log(this.employee);
