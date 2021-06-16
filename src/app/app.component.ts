@@ -9,7 +9,4 @@ export class AppComponent {
 
   title = 'Angular';
 
- months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-
- isavaliable = true;
 }

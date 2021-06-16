@@ -4,6 +4,7 @@ import { AccountsComponent } from '../accounts/accounts.component';
 import { DatabindComponent } from '../databind/databind.component';
 import { EmployeeComponent } from '../employee/employee.component';
 import { EventbindComponent } from '../eventbind/eventbind.component';
+import { NgifdirectiveComponent } from '../ngifdirective/ngifdirective.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
     {path:'employee',component:EmployeeComponent},
     {path:'accounts',component:AccountsComponent},
     {path:'databind',component:DatabindComponent},
-    {path: 'eventbind',component:EventbindComponent}
+    {path: 'eventbind',component:EventbindComponent},
+    {path: 'ngifdirective',component:NgifdirectiveComponent}
 
  
 ];

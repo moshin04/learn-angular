@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row g-2">
+    <div class="col-4">
+      <div class="p-3 border bg-light">
+        <div>Ng-If-Directive</div>
+        <hr />
+        <!-- How to implement the else block for ngIf directory -->
+        <!-- Give in # is called template-reference variable in our case its #elseBlock -->
+        <div></div>
+        <p>
+          Here i have used the angular specific html tag "ng-template" for if
+          and else condition in html.
+        </p>
+        <div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+        <ng-template #thenBlock>
+          <h3>This is then block - visible</h3>
+        </ng-template>
+
+        <ng-template #elseBlock>
+          <h3>This is else block - hidden</h3>
+        </ng-template>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="p-3 border bg-light">Ng-Switch-Directive</div>
+    </div>
+    <div class="col-4">
+      <div class="p-3 border bg-light">Ng-For-Directive</div>
+    </div>
+  </div>
+</div>
