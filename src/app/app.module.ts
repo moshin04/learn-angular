@@ -9,7 +9,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindComponent } from './databind/databind.component';
 import { EventbindComponent } from './eventbind/eventbind.component';
-import { NgifdirectiveComponent } from './ngifdirective/ngifdirective.component';
+import { DirectivesComponent } from './directives/directives.component';
+
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NgifdirectiveComponent } from './ngifdirective/ngifdirective.component'
     AccountsComponent,
     DatabindComponent,
     EventbindComponent,
-    NgifdirectiveComponent
+    DirectivesComponent,
+    
   ],
   imports: [
     BrowserModule,

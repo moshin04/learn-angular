@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from '../accounts/accounts.component';
 import { DatabindComponent } from '../databind/databind.component';
+import { DirectivesComponent } from '../directives/directives.component';
 import { EmployeeComponent } from '../employee/employee.component';
 import { EventbindComponent } from '../eventbind/eventbind.component';
-import { NgifdirectiveComponent } from '../ngifdirective/ngifdirective.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -13,8 +13,8 @@ const routes: Routes = [
     {path:'accounts',component:AccountsComponent},
     {path:'databind',component:DatabindComponent},
     {path: 'eventbind',component:EventbindComponent},
-    {path: 'ngifdirective',component:NgifdirectiveComponent}
-
+    {path: 'directives',component:DirectivesComponent},
+    
  
 ];
 
