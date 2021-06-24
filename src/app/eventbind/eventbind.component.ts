@@ -13,46 +13,46 @@ export class EventbindComponent implements OnInit {
   }
 
   msg = "";
-  
-  cartmsg="";
+
+  cartmsg = "";
 
 
-  myAddCart(){
+  myAddCart() {
 
-      this.msg = " Added to CART"
+    this.msg = " Added to CART"
   }
 
-  myInputValue(event: any){
+  myInputValue(event: any) {
     console.log(event);
 
   }
 
-  addCart(event: any){
+  addCart(event: any) {
     this.cartmsg = event.target.value + " Added in Cart"
   }
 
-  focusCallback(){
+  focusCallback() {
     console.log('focusCallback');
 
   }
-  blurCallback(){
+  blurCallback() {
     console.log('blurCallback')
   }
 
-  clickCallback(){
+  clickCallback() {
     console.log('clickCallback')
   }
 
-  dblclickCallback(){
+  dblclickCallback() {
     console.log('dblclickCallback')
   }
 
-  keydownCallback(){
+  keydownCallback() {
     console.log('KeyPressed');
   }
 
-  mouseenterCallback(){
-    console.log('mouse entered')
+  mouseenterCallback() {
+    console.log('mouse entered');
   }
 
 

@@ -7,13 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
-  displayName=true;
+  displayName = false;
 
-  color="green";
+  show = true;
+  
+  color = "green";
 
-  constructor() { }
+  condition = true;
+
+  user: any;
+
+  constructor() {
+
+    this.user = {
+      name: 'moshin',
+      title: 'engineer',
+      address: 'karnataka',
+      phone: [9874561230, 646532656, 654666561, 797979798],
+      phonefor: [123456789, 936258741, 123456987, 553656865]
+    }
+  }
 
   ngOnInit(): void {
+
   }
 
 
